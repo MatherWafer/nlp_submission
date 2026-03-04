@@ -133,16 +133,15 @@ def predict_test_ensemble(test_tsv, output_txt_file, threshold=0.50):
 # 4. EXECUTE AND GENERATE FILES
 # ==========================================
 
-# 1. Generate dev.txt (Using your left merge method)
+
 predict_dev_ensemble(
     ids_csv="dev_semeval_parids-labels.csv", 
     main_tsv="dontpatronizeme_pcl.tsv", 
     output_txt_file="dev.txt",
-    threshold=0.50 # Feel free to lower this slightly (e.g., 0.45) if you want to boost recall!
+    threshold=0.50 
 )
 
-# 2. Generate test.txt (Ensure you actually downloaded this file to your VM!)
-# If your test file is named something else, change "task4_test.tsv" below:
+
 predict_test_ensemble(
     test_tsv="task4_test.tsv", 
     output_txt_file="test.txt",
